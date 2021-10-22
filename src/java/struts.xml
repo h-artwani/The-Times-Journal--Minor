@@ -1,0 +1,125 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        <action name="addRecord" 
+                class="com.nds.controller.CommonController"
+                method="addRecord">
+            <result name="success">successfulsignup.jsp</result>
+            <result name="emailexist">isEmailValid.jsp</result>
+            <result name="usernameexist">isUsernameValid.jsp</result>
+        </action>
+        <action name="welcome" 
+                class="com.nds.controller.CommonController"
+                method="success">
+            <result name= "successAdmin">welcomeAdmin.jsp</result>
+            <result name= "successVendor">welcomeVendor.jsp</result>
+            <result name= "successCustomer">welcomeCustomer.jsp</result>
+            <result name="error">relogin.jsp</result>
+        </action>
+        <action name="subscribe" 
+                class="com.nds.controller.CommonController"
+                method="subscribeNewspaper">
+            <result name= "successCOD">payment_cod_success.jsp</result>
+            <result name= "otherOption">proceed_payment.jsp</result>
+        </action>
+        <action name="add_dboy" 
+                class="com.nds.controller.CommonController"
+                method="addDboy">
+            <result name= "success">dboy_success.jsp</result>
+            <result name= "error">failure.jsp</result>
+        </action>
+        <action name="update_dboy_details" 
+                class="com.nds.controller.CommonController"
+                method="update_Dboy">
+            <result name= "success">update_dboy_success.jsp</result>
+            <result name= "error">failure.jsp</result>
+        </action>
+        <action name="update_cart_details" 
+                class="com.nds.controller.CommonController"
+                method="update_cart">
+            <result name= "success">update_cart_success.jsp</result>
+            <result name= "error">failure.jsp</result>
+        </action>
+        <action name="update_personal_details" 
+                class="com.nds.controller.CommonController"
+                method="update_person_det">
+            <result name= "success">update_personal_success.jsp</result>
+            <result name= "emailnotvalid">email_in_use.jsp</result>
+            <result name= "error">failure.jsp</result>
+        </action>
+        <action name="emailverify" 
+                class="com.nds.controller.CommonController"
+                method="emailVerify">
+            <result name= "success">emailverified.jsp</result>
+           
+        </action>
+        <action name="reply" 
+                class="com.nds.controller.CommonController"
+                method="reply">
+            <result name= "success">reply_success.jsp</result>
+           
+        </action>
+        
+        <action name="payment_status" 
+                class="com.nds.controller.CommonController"
+                method="paymentStatus">
+            <result name= "success">payment_success.jsp</result>
+           
+        </action>
+        <action name="change_password" 
+                class="com.nds.controller.CommonController"
+                method="changePassword">
+            <result name= "success_cust">password_changed_success_cust.jsp</result>
+            <result name= "success_vend">password_changed_success_vend.jsp</result>
+            <result name= "failure_vend">reChangePassword_vend.jsp</result>
+            <result name= "failure_cust">reChangePassword_cust.jsp</result>
+           
+        </action>
+        <action name="change_password_adm" 
+                class="com.nds.controller.CommonController"
+                method="changePassword_adm">
+            <result name= "success">password_changed_success_adm.jsp</result>
+            <result name= "failure">reChangePassword_adm.jsp</result>
+           
+        </action>
+        
+        <action name="contact" 
+                class="com.nds.controller.CommonController"
+                method="contactUs">
+            <result name= "success_cust">contact_form_success_cust.jsp</result>
+            <result name= "success_vend">contact_form_success_vend.jsp</result>
+            <result name= "failure">failure.jsp</result>
+           
+        </action>
+        
+        <action name="add_cart" 
+                class="com.nds.controller.CommonController"
+                method="cart">
+            <result name= "success">add_to_cart_success.jsp</result>
+            <result name= "failure">failure.jsp</result>
+        </action>
+        <action name="forgotpassword" 
+                class="com.nds.controller.CommonController"
+                method="forgotPassword">
+            <result name= "success">otp_sent_success.jsp</result>
+            <result name= "emailFailure">emailfailure.jsp</result>
+        </action>
+        <action name="otp_verify" 
+                class="com.nds.controller.CommonController"
+                method="otp_Verify">
+            <result name= "success">otp_verify_success.jsp</result>
+            <result name= "failure">wrongotp.jsp</result>
+        </action>
+        <action name="newpassword" 
+                class="com.nds.controller.CommonController"
+                method="newPassword">
+            <result name= "success">password_changed_success_fp.jsp</result>
+            <result name= "failure">failure.jsp</result>
+        </action>
+       
+    </package>
+</struts>
